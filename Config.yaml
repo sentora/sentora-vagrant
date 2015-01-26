@@ -1,0 +1,5 @@
+---
+privateIp: "192.168.33.12"
+localIp: "192.168.1.12"
+cpus: 1
+memory: 512
