@@ -16,19 +16,19 @@ class Sentora
 # mount : themes, modules, apps
 		if user['themes'] != false
 			user['themes'].each do |_theme|
-				puts "Loading theme " + _theme['name']
+				config.vm.synced_folder _theme["path"]+_theme["name"], '/var/added/themes/'+ _theme["name"], type: _theme["type"] ||= nil
 			end
 		end
 
 		if user['modules'] != false
 			user['modules'].each do |_module|
-				puts "Loading module " + _module['name']
+				config.vm.synced_folder _module["path"]+_module["name"], '/var/added/modules/'+ _module["name"], type: _module["type"] ||= nil
 			end
 		end
 
 		if user['apps'] != false
 			user['apps'].each do |_app|
-				puts "Loading app " + _app['name']
+				config.vm.synced_folder _app["path"]+_app["name"], '/var/added/apps/'+ _app["name"], type: _app["type"] ||= nil
 			end
 		end
 
