@@ -1,5 +1,23 @@
 ---
 privateIp: "192.168.33.12"
-localIp: "192.168.1.12"
+publicIp: "192.168.1.12"
 cpus: 1
 memory: 512
+
+
+themes:
+ - name: 'MyTheme'
+   path: 'theme/myTheme'
+
+modules:
+ - name: 'moduleName'
+   path: 'module/myModule'
+
+apps:
+ - name: 'appName'
+   path: 'apps/myApp'
+ - name: 'appName22'
+   path: 'apps/myApp22'
+
+Test:
+ - name: 'Mine'
