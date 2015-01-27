@@ -6,10 +6,14 @@ memory: 1555
 
 
 themes:
- - name: MyTheme
+ - name: themeName
    path: Development/themes/
 
-modules: false
+modules:
+ - name: moduleName
+   path: Development/modules/
 
-apps: false
+apps:
+ - name: appName
+   path: Development/apps/
 
