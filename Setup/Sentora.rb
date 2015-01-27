@@ -16,10 +16,16 @@ class Sentora
 			shell.args = [devConfig['sentora']['tag'] , devConfig['sentora']['subDomain']]
 		end
 
-		config.vm.synced_folder './Core/sentora-core/', '/etc/sentora/',
-					:owner =>"root", :group => "root", :mount_options => ['dmode=777,fmode=777']
+		# mount sentora
+		if devConfig['sentora']['path'] != false
+			puts 'Mount sentora-core'
+			config.vm.synced_folder devConfig['sentora']['path'], '/etc/sentora/',
+						:owner =>"root", :group => "root", :mount_options => ['dmode=777,fmode=777']
+		else
+			abort('no Sentora-core defined in DevConfig.yaml')			
+		end
 
-# mount : themes, modules, apps
+		# mount : themes, modules, apps
 		if devConfig['themes'] != false
 			devConfig['themes'].each do |_theme|
 				config.vm.synced_folder _theme["path"]+_theme["name"], '/var/added/themes/'+ _theme["name"],

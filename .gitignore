@@ -1,4 +1,5 @@
 .vagrant/
 runner.rb
 Core/.gitkeep
+Core/sentora-core/
 
