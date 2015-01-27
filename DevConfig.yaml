@@ -1,8 +1,12 @@
 ---
 privateIp: "192.168.33.12"
 publicIp: "192.168.1.12"
-cpus: 2
-memory: 1555
+cpus: 1
+memory: 512
+
+sentora: 
+ tag: 1.0.0-RC2
+ subDomain: panel.sitename.com
 
 
 themes:
