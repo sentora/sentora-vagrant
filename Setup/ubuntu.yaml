@@ -1,4 +1,0 @@
----
-boxName: 'ubuntu_14.04_64'
-boxUrl: 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
-vbName: 'Sentora_Ubuntu'
