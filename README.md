@@ -17,5 +17,5 @@ Working project - feel free to contact me with any suggestion
 
 - maybe have DevConfig.yaml hold SetoraCorePath: ~/path/to/sentora ?
 
-- TODO - folders from users sentora git to mount to correct places
-- TODO - are there race conditions when mounting & provisioning? might need a temp cron job if so
+- ~~ TODO - folders from users sentora git to mount to correct places ~~
+- TODO - Folders mounted then run provision to install software & change values , i.e password sub-domain etc
