@@ -7,7 +7,7 @@ require Base + '/Setup/Sentora.rb'
 
 UserConfig = YAML::load( File.read(Base + '/DevConfig.yaml') )
 
-BoxConf = YAML::load( File.read(Base + '/Setup/'+UserConfig['box']['name']+'.yaml') )
+BoxConf = YAML::load( File.read(Base + '/Setup/boxes/'+UserConfig['box']['name']+'.yaml') )
 
 Vagrant.configure(2) do |config|
  	Sentora.Conf( config , BoxConf[UserConfig['box']['version']] , UserConfig )

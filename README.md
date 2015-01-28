@@ -16,3 +16,6 @@ Working project - feel free to contact me with any suggestion
 - Development/ holds themes , apps, modules etc currently being developed
 
 - maybe have DevConfig.yaml hold SetoraCorePath: ~/path/to/sentora ?
+
+- TODO - folders from users sentora git to mount to correct places
+- TODO - are there race conditions when mounting & provisioning? might need a temp cron job if so

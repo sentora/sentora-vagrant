@@ -1,5 +1,9 @@
 .vagrant/
 runner.rb
-Core/.gitkeep
 Core/sentora-core/
+!Core/.gitkeep
 
+# ignore folder theme , module etc
+Development/apps/*
+Development/modules/*
+Development/themes/*

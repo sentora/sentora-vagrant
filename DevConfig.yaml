@@ -1,30 +1,38 @@
 ---
+# box setup
 privateIp: "192.168.33.12"
 publicIp: "192.168.1.12"
 cpus: 1
 memory: 512
 
-
+# which box to use
 box:
  name: ubuntu64
  version: 14_04
 
-
-sentora: 
- tag: 1.0.0-RC2
- subDomain: panel.sitename.com
+# location to sentora - should be a git version by user : making git pulls & pushes available
+sentora:
  path: Core/sentora-core/
+ tag: 1.0.0-RC2
 
+# params passed to provision scripts $1 $2 etc
+provisionsParams: 
+ subDomain: panel.sitename.com
+ zadminPass: password
+ rootMySqlPass: password
 
+# mount themes, modules, apps for development : array
 themes:
- - name: themeName
-   path: Development/themes/
+ - path: Development/themes/themeName
+   name: themeName
+ - path: ~/themes/sentora/glass
+   name: glass
 
 modules:
- - name: moduleName
-   path: Development/modules/
+ - path: Development/modules/moduleName
+   name: moduleName
 
 apps:
- - name: appName
-   path: Development/apps/
+ - path: Development/apps/appName
+   name: appName
 
