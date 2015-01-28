@@ -8,18 +8,20 @@ memory: 512
 # which box to use
 box:
  name: ubuntu64
- version: 14_04
+ version: 14.04
 
 # location to sentora - should be a git version by user : making git pulls & pushes available
 sentora:
  path: Core/sentora-core/
  tag: 1.0.0-RC2
+ preConf: Core/sentora-installers/preconf/
 
 # params passed to provision scripts $1 $2 etc
 provisionsParams: 
  subDomain: panel.sitename.com
  zadminPass: password
  rootMySqlPass: password
+ timeZone: Europe/London
 
 # mount themes, modules, apps for development : array
 themes:

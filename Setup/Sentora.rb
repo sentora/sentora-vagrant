@@ -14,14 +14,17 @@ class Sentora
 		# pass params and run provision
 		config.vm.provision "shell" do |shell|
 			shell.inline = "/vagrant/Setup/provisions/"+boxConfig['provision']+" $1 $2 $3"
-			shell.args = [devConfig['provisionsParams']['subDomain'] , devConfig['provisionsParams']['zadminPass'] , devConfig['provisionsParams']['rootMySqlPass'] ]
+			shell.args = [devConfig['provisionsParams']['subDomain'] , devConfig['provisionsParams']['zadminPass'] , devConfig['provisionsParams']['rootMySqlPass'] , devConfig['provisionsParams']['timeZone'] ]
 		end
 
 
 		# mount sentora TODO - folders from users sentora git to mount to correct places
 		# TODO - are there race conditions when mounting & provisioning? might need a temp cron job if so
 		if devConfig['sentora']['path'] != false
-			config.vm.synced_folder devConfig['sentora']['path'], '/etc/sentora/',
+			config.vm.synced_folder devConfig['sentora']['path'], '/etc/sentora/panel/',
+						:owner =>"root", :group => "root", :mount_options => ['dmode=777,fmode=777']
+
+			config.vm.synced_folder devConfig['sentora']['preConf'], '/etc/sentora/configs/',
 						:owner =>"root", :group => "root", :mount_options => ['dmode=777,fmode=777']
 		else
 			abort('no Sentora-core defined in DevConfig.yaml')			

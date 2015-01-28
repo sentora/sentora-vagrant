@@ -4,4 +4,4 @@
 # $1 = subDomain
 # $2 = zadminPass
 # $3 = rootMySqlPass
-
+# $4 timeZone
