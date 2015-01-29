@@ -1,7 +1,7 @@
 .vagrant/
 runner.rb
 Core/*
-
+.idea/
 
 # ignore folder theme , module etc
 Development/apps/*
