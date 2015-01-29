@@ -1,0 +1,6 @@
+---
+12.04:
+  boxName: 'ubuntu_12.04_32'
+  boxUrl: 'http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-i386-vagrant-disk1.box'
+  vbName: 'Sentora_Ubuntu_12.04_x32'
+  provision: 'ubuntu.sh'

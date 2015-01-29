@@ -1,14 +1,14 @@
 ---
 # box setup
-privateIp: "192.168.33.12"
-publicIp: "192.168.1.12"
+privateIp: "192.168.33.17"
+publicIp: "192.168.1.17"
 cpus: 1
 memory: 512
 
 # which box to use
 box:
- name: ubuntu64
- version: 14.04
+ name: ubuntu32
+ version: 12.04
 
 # location to sentora - should be a git version by user : making git pulls & pushes available
 sentora:

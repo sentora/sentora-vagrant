@@ -14,7 +14,7 @@ class Sentora
 		# pass params and run provision
 		config.vm.provision "shell" do |shell|
 			shell.inline = "/vagrant/Setup/provisions/"+boxConfig['provision']+" $1 $2 $3 $4 $5 $6"
-			shell.args = [devConfig['provisionsParams']['subDomain'] , devConfig['provisionsParams']['zadminPass'] , devConfig['provisionsParams']['rootMySqlPass'] , devConfig['provisionsParams']['timeZone'] , devConfig['box']['version'] , devConfig['sentora']['tag'] ]
+			shell.args = [devConfig['provisionsParams']['subDomain'] , devConfig['provisionsParams']['zadminPass'] , devConfig['provisionsParams']['rootMySqlPass'] , devConfig['provisionsParams']['timeZone']  ]
 		end
 
 
