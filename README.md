@@ -1,21 +1,19 @@
 ## Sentora Vagrant Development Envs
 
+
+#### DevConfig.yaml option
+```yaml
+privateIp: {false | private ip addr}
+publicIp: {false | private ip addr}
+cpus: { false | int - default = 1 }
+memory: { false | init - default = 1024 }
+
+TODO
 ```
-$ vagrant up
-```
 
-I'm working on a way to make these envs a little easier for us to configure.
-I want a way to lauch an OS depending on user specified params.
 
-Also load folders for sentora /modules , themes etc
+- TODO , Need provisioner | installer to do what they need to do. Provisioner's run after mounting /sentora-core > /etc/sentora/panel & /sentora-installers/preconf > /etc/sentora/configs
 
-Working project - feel free to contact me with any suggestion 
+- If the ones who made the initial installer | beta installer could make a provision for ubuntu-x32 just so we can see how it would work out.
 
-- Branches with different boxes | folder in Setup/boxes ?
-- Core/ to hold sentora-core form github
-- Development/ holds themes , apps, modules etc currently being developed
-
-- maybe have DevConfig.yaml hold SetoraCorePath: ~/path/to/sentora ?
-
-- ~~ TODO - folders from users sentora git to mount to correct places ~~
-- TODO - Folders mounted then run provision to install software & change values , i.e password sub-domain etc
+- note that this approach shoudl make it easier for adding future & past OS's / boxes
