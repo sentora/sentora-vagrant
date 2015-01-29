@@ -1,0 +1,6 @@
+---
+6.5:
+  boxName: 'centos_6.5_x86_64'
+  boxUrl: 'https://github.com/2creatives/vagrant-centos/releases/download/v6.5.3/centos65-x86_64-20140116.box'
+  vbName: 'Sentora_Centos6.5'
+  provision: 'centos.sh'

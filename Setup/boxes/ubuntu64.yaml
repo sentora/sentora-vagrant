@@ -2,11 +2,9 @@
 14.04:
   boxName: 'ubuntu_14.04_64'
   boxUrl: 'https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box'
-  vbName: 'Sentora_Ubuntu'
+  vbName: 'Sentora_Ubuntu_14.04_x64'
   provision: 'ubuntu.sh'
 
 
 # other possible ubuntu64 box configs
-12_04:
-
-14_10:
+12.04:
